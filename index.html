@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ibrahim Mahamat Zene - Web Developer aus Bayreuth. Professionelle Webentwicklung mit modernen Technologien."
+    />
+    <meta
+      name="keywords"
+      content="Web Developer, Frontend, React, JavaScript, HTML, CSS, Bayreuth"
+    />
+    <meta name="author" content="Ibrahim Mahamat Zene" />
 
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <title>zene.dev</title>
-    <link rel="stylesheet" href="/CSS/style.css" />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -20,298 +31,574 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Ibrahim Mahamat Zene - Web Developer</title>
   </head>
   <body>
-    <div id="header">
+    <!-- Header Section -->
+    <header id="header" class="header">
       <div class="container">
-        <nav>
-          <img src="/Images/logo.png" class="logo" />
-          <ul id="sidemenu">
-            <li>
-              <a href="index.html">Hallo</a>
+        <nav class="navbar" role="navigation" aria-label="Hauptnavigation">
+          <div class="nav-brand">
+            <img src="images/logo.png" alt="zene.dev Logo" class="logo" />
+          </div>
+
+          <!-- Desktop Navigation -->
+          <ul class="nav-menu" id="nav-menu" role="menubar">
+            <li role="none"><a href="#header" role="menuitem">Start</a></li>
+            <li role="none"><a href="#about" role="menuitem">Über mich</a></li>
+            <li role="none">
+              <a href="#services" role="menuitem">Technologien</a>
             </li>
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#services">Tech</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-            <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+            <li role="none">
+              <a href="#portfolio" role="menuitem">Portfolio</a>
+            </li>
+            <!-- Removed Contact link -->
+            <!-- <li role="none"><a href="#contact" role="menuitem">Kontakt</a></li> -->
+            <li class="nav-close" role="none">
+              <button
+                class="close-btn"
+                onclick="closeMenu()"
+                aria-label="Menü schließen"
+              >
+                <i class="fas fa-times"></i>
+              </button>
+            </li>
           </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-          <!-- <img src="Images/moon.png" id="modeicon" /> -->
+
+          <!-- Theme Toggle & Mobile Menu -->
+          <div class="nav-controls">
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Farbschema wechseln"
+            >
+              <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+            <button
+              class="mobile-menu-btn"
+              onclick="openMenu()"
+              aria-label="Menü öffnen"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
         </nav>
-        <div class="header-text">
-          <p>Web Developer</p>
-          <h1>
-            Hallo,&#128075;ich bin <span>Ibrahim</span> <br />aus Bayreuth
-          </h1>
-        </div>
-      </div>
-    </div>
-    <!-- Über -->
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <div class="about-col-1">
-            <img src="/Images/Profile-image.png" />
-          </div>
-          <div class="about-col-2">
-            <h1 class="sub-title">Über mich</h1>
-            <p>
-              Fokus auf Innovation, kreative Lösungen und kontinuierliche
-              Weiterentwicklung. <br />Grundkenntnisse der Webentwicklung durch
-              praxisorientierte Projekte.<br />
-              Zielorientiert und teamfähig für effiziente Lösungen.
+
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-content">
+            <p class="hero-subtitle">Web Developer</p>
+            <h1 class="hero-title">
+              Hallo, <span class="wave">👋</span> ich bin
+              <span class="highlight">Ibrahim</span><br />
+              aus Bayreuth
+            </h1>
+            <p class="hero-description">
+              Leidenschaftlicher Entwickler mit Fokus auf moderne
+              Webtechnologien und benutzerfreundliche Lösungen.
             </p>
-            <!-- tab links  -->
-            <div class="tab-title">
-              <p
-                class="tab-links active-link"
-                data-tab="Skills"
-                onclick="opentab('Skills')"
-              >
-                Fähigkeiten
-              </p>
-              <p
-                class="tab-links"
-                data-tab="experinence"
-                onclick="opentab('experinence')"
-              >
-                Berufserfahrung
-              </p>
-              <p
-                class="tab-links"
-                data-tab="education"
-                onclick="opentab('education')"
-              >
-                Sprachen
+            <div class="hero-cta">
+              <a href="#portfolio" class="btn btn-primary">Meine Projekte</a>
+              <!-- Removed Contact button -->
+              <!-- <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a> -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Über mich</h2>
+          <p class="section-subtitle">Mein Weg in die Webentwicklung</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="images/Profile-image.png"
+              alt="Ibrahim Mahamat Zene"
+              class="profile-img"
+            />
+          </div>
+
+          <div class="about-info">
+            <div class="about-text">
+              <p>
+                Fokus auf Innovation, kreative Lösungen und kontinuierliche
+                Weiterentwicklung. Grundkenntnisse der Webentwicklung durch
+                praxisorientierte Projekte. Zielorientiert und teamfähig für
+                effiziente Lösungen.
               </p>
             </div>
 
-            <!-- Skills -->
-            <div class="tab-contents active-tab" id="Skills">
-              <ul>
-                <li>
-                  <span>Web Developer Ausbildung</span><br />Bei DCI Digital
-                  Career Institute GmbH, Berlin
-                </li>
-                <li>
-                  <span>2023-2024</span><br />DCI Einjährige Vollzeitausbildung
-                  mit MERN-Stack-Technologien. <br />Abschluss mit mehreren
-                  kleinen und einem großen Praxisprojekt.
-                  <br />Englischunterricht bis zur Mittelstufe.
-                </li>
-                <li>
-                  <span>Front-End</span><br />HTML5 <br />
-                  JavaScript <br />
-                  TypeScript
-                </li>
-                <li><span>Style</span><br />CSS3<br />Tailwind<br /></li>
-                <li><span>Framework</span><br />React.js<br />Next.js</li>
-                <li>
-                  <span>Backend</span><br />Node.js <br />Express.js
-                  <br />MongoDB<br />
-                </li>
-                <li><span>version control</span><br />Git <br />GitHub</li>
-              </ul>
-            </div>
-            <!-- BERUFSERFAHRUNG -->
-            <div class="tab-contents" id="experinence">
-              <ul>
-                <li>
-                  <span>2017-2021</span><br />Real,- SB Warenhaus<br />Erfolgreiche
-                  Ausbildung zum Einzelhandelskaufmann <br />an der Staatlichen
-                  Berufsschule Bayreuth II.
-                </li>
+            <!-- Tab Navigation -->
+            <div class="tabs">
+              <div class="tab-nav" role="tablist">
+                <button
+                  class="tab-btn active"
+                  data-tab="skills"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="skills-panel"
+                >
+                  Fähigkeiten
+                </button>
+                <button
+                  class="tab-btn"
+                  data-tab="experience"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="experience-panel"
+                >
+                  Berufserfahrung
+                </button>
+                <button
+                  class="tab-btn"
+                  data-tab="languages"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="languages-panel"
+                >
+                  Sprachen
+                </button>
+              </div>
 
-                <li>
-                  <span>2020-2022</span><br />Denn´S Biomarkt, Bayreuth<br />Verkäufer
-                  im Einzelhandel (ab und zu Stellvertreter)
-                </li>
-                <li>
-                  <span>2020-2022</span><br />Amazon flex, Bayreuth<br />Selbständig
-                  Lieferpartner (Nebenjob )
-                </li>
-              </ul>
-            </div>
-            <!-- SPRACHEN -->
-            <div class="tab-contents" id="education">
-              <ul>
-                <li><span>Arabisch:</span><br />Muttersprache</li>
-                <li><span>Deutsch:</span><br />Verhandlungssache (C1)</li>
-                <li><span>English:</span><br />Gute Kenntnisse (B2)</li>
-                <li>
-                  <span>Französisch</span><br />
-                  Begann zu lernen (A)
-                </li>
-              </ul>
+              <!-- Tab Content -->
+              <div class="tab-content">
+                <div
+                  id="skills-panel"
+                  class="tab-panel active"
+                  role="tabpanel"
+                  aria-labelledby="skills"
+                >
+                  <div class="skills-grid">
+                    <div class="skill-category">
+                      <h4>Frontend</h4>
+                      <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript & TypeScript</li>
+                        <li>React.js & Next.js</li>
+                        <li>Tailwind CSS</li>
+                      </ul>
+                    </div>
+                    <div class="skill-category">
+                      <h4>Backend</h4>
+                      <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                      </ul>
+                    </div>
+                    <div class="skill-category">
+                      <h4>Tools</h4>
+                      <ul>
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Responsive Design</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  id="experience-panel"
+                  class="tab-panel"
+                  role="tabpanel"
+                  aria-labelledby="experience"
+                >
+                  <div class="timeline">
+                    <div class="timeline-item">
+                      <div class="timeline-date">2023-2024</div>
+                      <div class="timeline-content">
+                        <h4>Web Developer Ausbildung</h4>
+                        <p>DCI Digital Career Institute GmbH, Berlin</p>
+                        <p>
+                          Einjährige Vollzeitausbildung mit
+                          MERN-Stack-Technologien.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-date">2020-2022</div>
+                      <div class="timeline-content">
+                        <h4>Verkäufer im Einzelhandel</h4>
+                        <p>Denn\'s Biomarkt, Bayreuth</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-date">2017-2021</div>
+                      <div class="timeline-content">
+                        <h4>Ausbildung Einzelhandelskaufmann</h4>
+                        <p>Real SB-Warenhaus</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  id="languages-panel"
+                  class="tab-panel"
+                  role="tabpanel"
+                  aria-labelledby="languages"
+                >
+                  <div class="languages-grid">
+                    <div class="language-item">
+                      <h4>Arabisch</h4>
+                      <p>Muttersprache</p>
+                      <div class="language-level">
+                        <div class="level-bar" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div class="language-item">
+                      <h4>Deutsch</h4>
+                      <p>Verhandlungssicher (C1)</p>
+                      <div class="language-level">
+                        <div class="level-bar" style="width: 90%"></div>
+                      </div>
+                    </div>
+                    <div class="language-item">
+                      <h4>Englisch</h4>
+                      <p>Gute Kenntnisse (B2)</p>
+                      <div class="language-level">
+                        <div class="level-bar" style="width: 75%"></div>
+                      </div>
+                    </div>
+                    <div class="language-item">
+                      <h4>Französisch</h4>
+                      <p>Grundkenntnisse (A1)</p>
+                      <div class="language-level">
+                        <div class="level-bar" style="width: 25%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- services -->
-    <div id="services">
+    </section>
+
+    <!-- Services/Technologies Section -->
+    <section id="services" class="services section">
       <div class="container">
-        <h1 class="services">Technologie</h1>
-        <div class="services-list">
-          <div>
-            <i class="fa-brands fa-html5"></i>
-            <h2>HTML5</h2>
+        <div class="section-header">
+          <h2 class="section-title">Technologien</h2>
+          <p class="section-subtitle">Meine technischen Kompetenzen</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h3>HTML5</h3>
             <p>
-              Meine umfangreiche praktische HTML-Erfahrung qualifiziert mich
-              ideal für diese HTML-Aufgabe.
+              Semantisches Markup und moderne HTML5-Features für strukturierte
+              und zugängliche Webseiten.
             </p>
-            <a href="#"><br /><span>&#8679;</span> </a>
-          </div>
-          <!--  -->
-          <div>
-            <i class="fa-brands fa-css3-alt"></i>
-            <h2>CSS3</h2>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <h3>CSS3</h3>
             <p>
-              Meine umfangreiche praktische Erfahrung mit CSS3 qualifiziert mich
-              für diese Aufgabe.
+              Modernes Styling mit Flexbox, Grid, Animationen und responsive
+              Design für alle Geräte.
             </p>
-            <a href="#"><br /><span>&#8679;</span> </a>
-          </div>
-          <!--  -->
-          <div>
-            <i class="fa-brands fa-js"></i>
-            <h2>JAVASCRIPT</h2>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fab fa-js-square"></i>
+            </div>
+            <h3>JavaScript</h3>
             <p>
-              Ich habe Grundkenntnisse in JavaScript, die es mir ermöglichen, in
-              diesem Bereich zu arbeiten und wichtige Aufgaben zu erledigen.
-              Außerdem versuche ich, mich jeden Tag weiterzuentwickeln und
-              besser zu werden als am Tag zuvor.
+              Interaktive Funktionalitäten und dynamische Inhalte mit modernem
+              JavaScript ES6+.
             </p>
-            <a href="#"><br /><span>&#8679;</span> </a>
-          </div>
-          <!--  -->
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fab fa-react"></i>
+            </div>
+            <h3>React.js</h3>
+            <p>
+              Komponentenbasierte Entwicklung für skalierbare und wartbare
+              Webanwendungen.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fab fa-node-js"></i>
+            </div>
+            <h3>Node.js</h3>
+            <p>Server-seitige Entwicklung und API-Erstellung mit JavaScript.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>MongoDB</h3>
+            <p>
+              NoSQL-Datenbankmanagement für flexible und skalierbare
+              Datenstrukturen.
+            </p>
+          </article>
         </div>
       </div>
-    </div>
-    <!-- portfolio -->
-    <div id="portfolio">
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
       <div class="container">
-        <h1 class="sub-title">Meine Arbeit</h1>
-        <div class="work-list">
-          <div class="work">
-            <img src="/Images/jabya-perfume.png" />
-            <div class="layer">
-              <h3>Jabya Perfume E-commerce Final Projekt</h3>
-              <p>
-                Dies ist mein herausragendes Projekt, das mit Next.js entwickelt
-                wurde und zahlreiche Funktionen bietet.
-              </p>
-              <a href="https://jabya-perfume.vercel.app"
-                ><i class="fa-solid fa-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <!--  -->
-          <div class="work">
-            <img src="/Images/expense-app.png" />
-            <div class="layer">
-              <h3>Expense App</h3>
-              <p>
-                Ein Projekt, das ich mit HTML5, CSS3 und JavaScript erstellt
-                habe.
-              </p>
-              <a href="https://expense-app01.vercel.app"
-                ><i class="fa-solid fa-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <!--  -->
-          <div class="work">
-            <img src="/Images/todolist.png" />
-            <div class="layer">
-              <h3>ToDo List App</h3>
-              <p>
-                Dies ist meine herausragende ToDo-Liste, die mit HTML5, CSS3,
-                und JavaScript.
-              </p>
-              <a href="https://todolist01.vercel.app"
-                ><i class="fa-solid fa-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
+        <div class="section-header">
+          <h2 class="section-title">Meine Projekte</h2>
+          <p class="section-subtitle">Ausgewählte Arbeiten und Projekte</p>
         </div>
-        <a href="#" class="btn"><i class="fa-solid fa-arrow-up"></i></a>
-      </div>
-    </div>
-    <!-- contact -->
-    <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">Kontaktiere mich</h1>
-            <p>
-              <i class="fa-regular fa-paper-plane"></i>
-              zene@mail.de
-            </p>
-            <p><i class="fa-brands fa-whatsapp"></i> +49 162 8136116</p>
-            <p><i class="fa-solid fa-location-dot"></i> Bayreuth, Germany</p>
-            <!-- social media   -->
-            <div class="social-icons">
-              <a href="https://github.com/Ibrahimzene" target="_blank"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/ibrahim-mahamat-zene/"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a
-                href="https://www.xing.com/profile/Ibrahim_Mahamatzene"
-                target="_blank"
-                ><i class="fa-brands fa-xing"></i
-              ></a>
-            </div>
-            <a href="images/#" download class="btn btn2">Download CV</a>
-          </div>
-          <div class="contact-right">
-            <!-- form -->
-            <form name="submit-to-google-sheet">
-              <!--  <form action="https://api.web3forms.com/submit" method="POST">
-              <input
-                type="hidden"
-                name="access_key"
-                value="4a8f4e51-2028-46dd-aec5-01292da4e5d3"
-              /> -->
-              <input
-                type="text"
-                name="Name"
-                placeholder="Deine Name"
-                required
+
+        <div class="portfolio-grid">
+          <article class="portfolio-item">
+            <div class="portfolio-image">
+              <img
+                src="images/jabya-perfume.png"
+                alt="Jabya Perfume E-commerce Projekt"
               />
-              <input
-                type="email"
-                name="Email"
-                placeholder="Deine Email"
-                required
-              />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Deine Nachricht"
-              ></textarea>
-              <button type="submit" class="btn btn2">Send</button>
-            </form>
-            <span id="msg"></span>
-          </div>
+              <div class="portfolio-overlay">
+                <div class="portfolio-content">
+                  <h3>Jabya Perfume E-commerce</h3>
+                  <p>
+                    Vollständige E-Commerce-Lösung entwickelt mit Next.js,
+                    featuring moderne UI/UX und umfangreiche Funktionalitäten.
+                  </p>
+                  <div class="portfolio-tech">
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">E-Commerce</span>
+                  </div>
+                  <a
+                    href="https://jabya-perfume.vercel.app"
+                    target="_blank"
+                    class="portfolio-link"
+                    aria-label="Jabya Perfume Projekt ansehen"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-item">
+            <div class="portfolio-image">
+              <img src="images/expense-app.png" alt="Expense Tracker App" />
+              <div class="portfolio-overlay">
+                <div class="portfolio-content">
+                  <h3>Expense Tracker</h3>
+                  <p>
+                    Intuitive Ausgaben-Tracking-App mit lokaler Datenspeicherung
+                    und übersichtlicher Darstellung.
+                  </p>
+                  <div class="portfolio-tech">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                  </div>
+                  <a
+                    href="https://expense-app01.vercel.app"
+                    target="_blank"
+                    class="portfolio-link"
+                    aria-label="Expense App ansehen"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-item">
+            <div class="portfolio-image">
+              <img src="images/todolist.png" alt="Todo List App" />
+              <div class="portfolio-overlay">
+                <div class="portfolio-content">
+                  <h3>Todo List App</h3>
+                  <p>
+                    Elegante und funktionale Todo-Liste mit Drag & Drop,
+                    Kategorien und lokaler Speicherung.
+                  </p>
+                  <div class="portfolio-tech">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Local Storage</span>
+                    <span class="tech-tag">Responsive</span>
+                  </div>
+                  <a
+                    href="https://todolist01.vercel.app"
+                    target="_blank"
+                    class="portfolio-link"
+                    aria-label="Todo App ansehen"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-    <!-- copyright -->
-    <div class="copyright">
-      <p>
-        &copy; 2024-2025 All rights reserved
-        <img src="/Images/logo.png" /> zene.dev
-      </p>
-    </div>
-    <script src="/JavaScript/opentab.js"></script>
-    <script src="/JavaScript/openmenu.js"></script>
-    <script src="/JavaScript/contactform.js"></script>
-    <script src="JavaScript/mode.js"></script>
+    </section>
+
+    <!-- Contact Section (Removed form and CV download) -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Kontakt</h2>
+          <p class="section-subtitle">Lassen Sie uns zusammenarbeiten</p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>E-Mail</h4>
+                <a href="mailto:zene@mail.de">zene@mail.de</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="contact-details">
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/4916281361116">+49 162 8136116</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Standort</h4>
+                <p>Bayreuth, Deutschland</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <h4>Folgen Sie mir</h4>
+              <div class="social-icons">
+                <a
+                  href="https://github.com/Ibrahimzene"
+                  target="_blank"
+                  aria-label="GitHub Profil"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ibrahim-mahamat-zene/"
+                  target="_blank"
+                  aria-label="LinkedIn Profil"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.xing.com/profile/Ibrahim_Mahamatzene"
+                  target="_blank"
+                  aria-label="Xing Profil"
+                >
+                  <i class="fab fa-xing"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Removed Download CV button -->
+            <!-- <a href="#" download class="btn btn-primary download-cv">
+                        <i class="fas fa-download"></i>
+                        Lebenslauf herunterladen
+                    </a> -->
+          </div>
+
+          <!-- Removed Contact Form -->
+          <!-- <div class="contact-form-wrapper">
+                    <form class="contact-form" name="submit-to-google-sheet" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="Name" required aria-describedby="name-error">
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="Email" required aria-describedby="email-error">
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Nachricht *</label>
+                            <textarea id="message" name="Message" rows="6" required aria-describedby="message-error"></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Nachricht senden</span>
+                            <span class="btn-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                Wird gesendet...
+                            </span>
+                        </button>
+                        
+                        <div id="form-message" class="form-message" role="alert"></div>
+                    </form>
+                </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img
+              src="images/logo.png"
+              alt="zene.dev Logo"
+              class="footer-logo"
+            />
+            <span>zene.dev</span>
+          </div>
+          <p class="footer-text">
+            &copy; 2024-2025 Ibrahim Mahamat Zene. Alle Rechte vorbehalten.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      class="back-to-top"
+      id="back-to-top"
+      aria-label="Nach oben scrollen"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
   </body>
 </html>
